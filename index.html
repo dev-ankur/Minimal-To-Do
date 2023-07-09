@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal To-Do</title>
+
+    <style>
+        .container{
+            margin: 0 auto;
+            text-align:center;
+        }
+
+        #search-box{
+            margin: 20px auto;
+        }
+        ul{
+            list-style: none;
+            text-align: left;
+            width: 320px;
+            margin: 0 auto;
+        }
+        ul li{
+            margin: 7px auto;
+        }
+        ul li input[type='checkbox']{
+            margin-right: 7px;
+        }
+        #category{
+            margin: 20px auto 10px;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+            overflow: hidden;
+            max-width: 85%;
+            display: inline-block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: bottom;
+        }
+
+        #category span a.selected{
+            font-weight: 700;
+        }
+        #empty-msg{
+            margin-top: 50px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do </h1>
+            <button id="add-task">+ Add task</button>
+           
+        </header>
+        <section id="search-box">
+            <input id="search" type="search" placeholder="Search" />
+        </section>
+        <section>
+            <div id="category">
+                <span><a href="#" id="select-all" class="selected">All</a></span> &nbsp;|&nbsp;
+                <span><a href="#" id="select-remaining">Remaining</a></span> &nbsp;|&nbsp;
+                <span><a href="#" id="select-done">Done</a></span>
+            </div>
+            <div id="category-notes">
+                <ul>
+                <!--   
+                    <li>
+                        <input type="checkbox" checked />
+                        <span style="text-decoration-line: line-through;">hello world</span>
+                    </li>
+                -->
+                </ul>
+                <span id="empty-msg"><i>Task list is Empty!</i></span>
+            </div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

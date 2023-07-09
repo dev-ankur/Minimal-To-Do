@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal To-Do</title>
+    
+    <style>
+        .container{
+            margin: 0 auto;
+            text-align: center;
+            max-width: 320px;
+        }
+        #btn-edit{
+            display: none;
+        }
+
+        section{
+            text-align: left;
+        }
+        #preview{
+            display: none;
+        }
+
+        #preview h3{
+            margin-top: 30px;
+        }
+        #preview p{
+            line-height:1.4;
+        }
+        #write-task input[type='text']{
+            margin: 30px auto 20px;
+            width: 100%;
+        }
+        #write-task textarea{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>To-Do</h1>
+            <!-- <p id="save-status">Saved</p> -->
+            <button id="btn-home">home</button>
+            <button id="btn-preview">preview</button>
+            <button id="btn-edit">edit</button>
+            <!-- <button id="btn-save" disabled>save</button> -->
+        </header>
+        <section id="write-task">
+            <input type="text" name="title" id="task-title" placeholder="Enter title" /> <br/>
+            <textarea name="description" id="task-description" cols="30" rows="10" placeholder="Add description"></textarea>
+        </section>
+
+        <section id="preview">
+            <h3></h3>
+            <p></p>
+        </section>
+    </div>
+    
+    <script src="task.js"></script>
+    
+</body>
+</html>
