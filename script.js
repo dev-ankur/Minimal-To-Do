@@ -81,7 +81,7 @@ var addTask = document.getElementById('add-task');
 addTask.addEventListener('click', ()=>{
 
     localStorage.setItem('newTask', '1');
-    window.location.href = '/task.html';
+    window.location.href = 'task.html';
 
 })
 
@@ -136,7 +136,7 @@ function createList(){
 
             await localStorage.setItem('selectedTask', JSON.stringify(categoryTasksList[i]))
             
-            window.location.href = '/task.html';
+            window.location.href = 'task.html';
             
         })
         removeList.addEventListener('click', (e)=>{

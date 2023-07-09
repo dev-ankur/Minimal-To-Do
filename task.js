@@ -87,7 +87,7 @@ homeBtn.addEventListener('click', (e)=>{
     localStorage.setItem('selectedTask', null);
     localStorage.setItem('newTask', '0');
 
-    window.location.href = '/';
+    window.location.href = 'index.html';
 })
 
 
